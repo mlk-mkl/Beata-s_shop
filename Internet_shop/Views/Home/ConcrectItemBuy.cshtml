@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Internet_shop.Models.Magazine
+
+<div>
+    <h3>Make a purchase</h3>
+    <form method="post" action="">
+        <input type="hidden" value="@Model.Id" name="Id" />
+        <table>
+            <caption>You are buying  by price - @Model.Price </caption>
+            <tr>
+                <td><p>Input your name </p></td>
+                <td><input type="text" name="Person" /> </td>
+            </tr>
+            <tr>
+                <td><p>Address :</p></td>
+                <td>
+                    <input type="text" name="Address" />
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Buy1" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
