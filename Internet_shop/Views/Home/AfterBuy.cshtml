@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Internet_shop.Models.Purchase
+
+<div>
+
+    <h3>You made a purchase</h3>
+    <h3>You bought @Model.Magazine.Name by price - @Model.Magazine.Price $</h3>
+    <img width="200px" height="200px" class="card-img-top" src="@Model.Magazine.PicturePath" alt="Card image">
+
+    <br />
+    ви замовили на адресу @Model.Address<br />
+    <br />
+    ви замовили @Model.Count штук<br />
+    <br />
+    загальна ціна @Model.GenerealPrice $
+    <br />
+    очікуйте курєр доставить +- за 1500годин
+</div>

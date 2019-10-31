@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "My purchases";
+}
+@model List<Internet_shop.Models.Purchase>
+
+список покупок
+<br/>
+
+<div class="row">
+
+    @foreach (var purchase in Model)
+    {
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3>You bought @purchase.Magazine.Name by price - @purchase.Magazine.Price $</h3>
+                    <img width="200px" height="200px" class="card-img-top" src="@purchase.Magazine.PicturePath" alt="Card image">
+
+                    <br />
+                    ви замовили на адресу @purchase.Address<br />
+                    <br />
+                    ви замовили @purchase.Count штук<br />
+                    <br />
+                    загальна ціна @purchase.GenerealPrice $
+                    <br />
+
+                    Дата покупки @purchase.Date
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

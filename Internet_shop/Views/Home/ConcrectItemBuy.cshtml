@@ -5,22 +5,25 @@
 @model Internet_shop.Models.Magazine
 
 <div>
-    <h3>Make a purchase</h3>
-    <form method="post" action="">
-        <input type="hidden" value="@Model.Id" name="Id" />
-        <table>
-            <caption>You are buying  by price - @Model.Price </caption>
-            <tr>
-                <td><p>Input your name </p></td>
-                <td><input type="text" name="Person" /> </td>
-            </tr>
-            <tr>
-                <td><p>Address :</p></td>
-                <td>
-                    <input type="text" name="Address" />
-                </td>
-            </tr>
-            <tr><td><input type="submit" value="Buy1" /> </td><td></td></tr>
-        </table>
+
+    <form method="post" action="/Home/BuyConcrect">
+
+        <h3>Make a purchase</h3>
+        <h3>You are buying @Model.Name by price - @Model.Price $</h3>
+        <img width="200px" height="200px" class="card-img-top" src="@Model.PicturePath" alt="Card image">
+
+
+        <input type="hidden" value="@Model.Id" name="MagazineID" />
+        <br />
+        adress<br />
+        <input type="text" name="Address" />
+        <br />
+        count<br />
+        <input type="text" name="Count" />
+        <br />
+
+
+        <input type="submit" value="Зробити покупку" />
     </form>
+
 </div>
